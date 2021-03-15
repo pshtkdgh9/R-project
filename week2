@@ -1,0 +1,28 @@
+library(knitr)
+dataset <- read.csv(file = "Actors.csv", header = TRUE)
+print(dataset)
+head(dataset)
+tail(dataset)
+library(readxl)
+dataset2 <- read_excel(path ="Actors.xls", col_names = TRUE)
+a <- c(1,2,3)
+a <- c(a,4,5)
+a[10] <- 10
+a
+b <- factor(c("S","U","U"))
+b
+c <- factor(c("Q","Q","S"))
+object <- list(al = a, bl = b, cl = c)
+object #object리스트 확인
+object$al #object리스트의 al 항목 확인
+object$al[2] #object리스트의 al의 2번째 데이터
+
+help("airquality") # airquality 데이터셋에 대한 설명
+data("airquality") # airquality 데이터셋 불러오기
+head(airquality) # airquality 데이터셋 살펴보기, 위에서부터 5개 #tail(airquality) => 아래에서부터 5개
+edit(airquality) # 데이터셋을 Editor로 읽어 편집할 수 있는 기본 방법
+write.csv(airquality, "airquality.csv") #  데이터셋을 CSV로 쓰기; 사전 작업 -> 파일확인 
+
+
+aqm <- read.csv("airquality.csv") # 파일을 읽어서 데이터셋으로 전달 ; 확인
+
